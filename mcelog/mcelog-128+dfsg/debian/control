@@ -1,7 +1,7 @@
 Source: mcelog
 Section: admin
 Priority: optional
-Maintainer: Julien BLACHE <jblache@debian.org>
+Maintainer: Vinson Lee <vlee@freedesktop.org>
 Build-Depends: debhelper (>= 5.0.0)
 Standards-Version: 3.9.2
 
