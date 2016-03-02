@@ -1,4 +1,4 @@
-mcelog (128+dfsg-0ubuntu1) precise-backports; urgency=low
+mcelog (128+dfsg-1ppa1~precise) precise; urgency=low
 
   * New upstream release
 
