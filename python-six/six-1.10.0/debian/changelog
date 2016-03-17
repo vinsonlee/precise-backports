@@ -1,8 +1,8 @@
-six (1.10.0-0ubuntu1) precise; urgency=low
+six (1.10.0-2ppa1~precise) precise; urgency=low
 
   * New upstream release
 
- -- vlee <vlee@precise>  Wed, 16 Mar 2016 16:06:35 -0700
+ -- Vinson Lee <vlee@freedesktop.org>  Wed, 16 Mar 2016 16:06:35 -0700
 
 six (1.1.0-2) unstable; urgency=low
 

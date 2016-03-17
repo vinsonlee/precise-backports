@@ -1,7 +1,7 @@
 Source: six
 Section: python
 Priority: optional
-Maintainer: Colin Watson <cjwatson@debian.org>
+Maintainer: Vinson Lee <vlee@freedesktop.org>
 Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 7.2.11~), python (>= 2.6.6-3~), python-all, python3 (>= 3.1.2-8~), python3-all
 Homepage: http://packages.python.org/six/
