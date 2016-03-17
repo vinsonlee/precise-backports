@@ -1,0 +1,24 @@
+Description: search multiarch paths for libraries
+ hack to get numpys distutils multiarch aware
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/python-numpy/+bug/818867
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=640940
+Author: Julian Taylor <jtaylor@ubuntu.com>
+
+--- a/numpy/distutils/system_info.py
++++ b/numpy/distutils/system_info.py
+@@ -201,6 +201,15 @@
+                                      '/usr/lib'], platform_bits)
+     default_x11_include_dirs = ['/usr/X11R6/include','/usr/X11/include',
+                                 '/usr/include']
++    try:
++       import subprocess as sp
++       p = sp.Popen(["gcc", "-print-multiarch"], stdout=sp.PIPE)
++       triplet = str(p.communicate()[0].decode().strip())
++       if p.returncode == 0:
++           default_x11_lib_dirs += [os.path.join("/usr/lib/", triplet)]
++           default_lib_dirs += [os.path.join("/usr/lib/", triplet)]
++    except:
++       warnings.warn('failed to detect multiarch paths, please install gcc')
+ 
+ if os.path.join(sys.prefix, 'lib') not in default_lib_dirs:
+     default_lib_dirs.insert(0,os.path.join(sys.prefix, 'lib'))
