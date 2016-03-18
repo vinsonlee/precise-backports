@@ -14,8 +14,6 @@ usr/lib/python3*/*-packages/numpy/lib/
 usr/lib/python3*/*-packages/numpy/linalg/
 usr/lib/python3*/*-packages/numpy/ma/
 usr/lib/python3*/*-packages/numpy/matrixlib/
-usr/lib/python3*/*-packages/numpy/numarray/
-usr/lib/python3*/*-packages/numpy/oldnumeric/
 usr/lib/python3*/*-packages/numpy/polynomial/
 usr/lib/python3*/*-packages/numpy/random/
 usr/lib/python3*/*-packages/numpy/testing/

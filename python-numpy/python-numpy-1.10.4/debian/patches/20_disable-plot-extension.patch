@@ -3,20 +3,19 @@ Description: Disable plot_directive and ignore any import errors when
  as a dependency.
 Author: Barry Warsaw <barry@ubuntu.com>
 Bug-Ubuntu: https://launchpad.net/bugs/664276
-=== modified file 'doc/source/conf.py'
---- old/doc/source/conf.py	2010-12-24 00:14:25 +0000
-+++ new/doc/source/conf.py	2011-02-10 17:23:52 +0000
-@@ -21,7 +21,8 @@
+--- a/doc/source/conf.py
++++ b/doc/source/conf.py
+@@ -21,8 +21,7 @@ sys.path.insert(0, os.path.abspath('../sphinxext'))
+ 
  extensions = ['sphinx.ext.autodoc', 'sphinx.ext.pngmath', 'numpydoc',
                'sphinx.ext.intersphinx', 'sphinx.ext.coverage',
-               'sphinx.ext.doctest', 'sphinx.ext.autosummary',
--              'plot_directive']
-+              #'plot_directive']
-+              ]
+-              'sphinx.ext.doctest', 'sphinx.ext.autosummary',
+-              'matplotlib.sphinxext.plot_directive']
++              'sphinx.ext.doctest', 'sphinx.ext.autosummary']
  
  # Add any paths that contain templates here, relative to this directory.
  templates_path = ['_templates']
-@@ -212,7 +213,7 @@
+@@ -210,7 +209,7 @@ intersphinx_mapping = {'http://docs.python.org/dev': None}
  phantom_import_file = 'dump.xml'
  
  # Make numpydoc to generate plots for example sections
@@ -25,57 +24,3 @@ Bug-Ubuntu: https://launchpad.net/bugs/664276
  
  # -----------------------------------------------------------------------------
  # Autosummary
-@@ -251,19 +252,23 @@
- import math
- phi = (math.sqrt(5) + 1)/2
- 
--import matplotlib
--matplotlib.rcParams.update({
--    'font.size': 8,
--    'axes.titlesize': 8,
--    'axes.labelsize': 8,
--    'xtick.labelsize': 8,
--    'ytick.labelsize': 8,
--    'legend.fontsize': 8,
--    'figure.figsize': (3*phi, 3),
--    'figure.subplot.bottom': 0.2,
--    'figure.subplot.left': 0.2,
--    'figure.subplot.right': 0.9,
--    'figure.subplot.top': 0.85,
--    'figure.subplot.wspace': 0.4,
--    'text.usetex': False,
--})
-+try:
-+    import matplotlib
-+except ImportError:
-+    sys.stderr.write('matplotlib is not available; disabling plots\n')
-+else:
-+    matplotlib.rcParams.update({
-+        'font.size': 8,
-+        'axes.titlesize': 8,
-+        'axes.labelsize': 8,
-+        'xtick.labelsize': 8,
-+        'ytick.labelsize': 8,
-+        'legend.fontsize': 8,
-+        'figure.figsize': (3*phi, 3),
-+        'figure.subplot.bottom': 0.2,
-+        'figure.subplot.left': 0.2,
-+        'figure.subplot.right': 0.9,
-+        'figure.subplot.top': 0.85,
-+        'figure.subplot.wspace': 0.4,
-+        'text.usetex': False,
-+        })
-
-=== modified file 'doc/sphinxext/tests/test_docscrape.py'
---- old/doc/sphinxext/tests/test_docscrape.py	2010-12-24 00:14:25 +0000
-+++ new/doc/sphinxext/tests/test_docscrape.py	2011-02-10 17:23:52 +0000
-@@ -559,7 +559,7 @@
-     assert doc['Summary'][0] == u'öäöäöäöäöåååå'.encode('utf-8')
- 
- def test_plot_examples():
--    cfg = dict(use_plots=True)
-+    cfg = dict(use_plots=False)
- 
-     doc = SphinxDocString("""
-     Examples
-

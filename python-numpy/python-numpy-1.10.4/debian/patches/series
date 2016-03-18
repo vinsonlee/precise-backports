@@ -1,8 +1,7 @@
-#01_fix_man_hyphens.patch
-02_build_dotblas.patch
 03_force_f2py_version.patch
-#05_fix_endianness_detection.patch
 10_use_local_python.org_object.inv_sphinx.diff
-20_sphinx_1.1.2.diff
+python3-soabi.patch
+adapt_swig_docs_to_debian.patch
+0005-Dont-fail-if-we-cant-import-mingw32.patch
+0006-disable-asserts-on-ppc-with-broken-malloc-only-longd.patch
 20_disable-plot-extension.patch
-search-multiarch-paths.patch

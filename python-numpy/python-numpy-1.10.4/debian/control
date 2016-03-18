@@ -1,7 +1,7 @@
 Source: python-numpy
 Section: python
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: Vinson Lee <vlee@freedesktop.org>
 XSBC-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Sandro Tosi <morph@debian.org>
 Build-Depends: python-all-dev (>= 2.6.6-3~), python-all-dbg, gfortran (>= 4:4.2), libblas-dev [!arm !m68k], liblapack-dev [!arm !m68k], debhelper (>= 7.0.50~), patchutils, python-docutils, python-sphinx (>= 1.0.7+dfsg), python-nose, python3-all-dev, python3-all-dbg, python3-nose

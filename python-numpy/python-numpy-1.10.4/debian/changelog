@@ -1,8 +1,8 @@
-python-numpy (1:1.10.4-0ubuntu1) precise; urgency=low
+python-numpy (1:1.10.4-2ubuntu2ppa1~precise) precise; urgency=low
 
   * New upstream release
 
- -- vlee <vlee@precise>  Thu, 17 Mar 2016 17:04:18 -0700
+ -- Vinson Lee <vlee@freedesktop.org>  Thu, 17 Mar 2016 17:04:18 -0700
 
 python-numpy (1:1.6.1-6ubuntu1) precise; urgency=low
 

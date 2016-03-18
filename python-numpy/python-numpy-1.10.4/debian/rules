@@ -24,9 +24,11 @@ override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf `find -name build -type d`
 	rm -rf `find . -name "*.pyc" -type f`
+	rm -rf doc/fontList.cache numpy/f2py/docs/usersguide/index.html
+	rm -rf doc/source/reference/generated
 
 override_dh_installman:
-	dh_installman numpy/f2py/f2py.1
+	dh_installman doc/f2py/f2py.1
 	# link manpage for versioned and dbg incarnations of f2py
 	for v in $(PY2VERS); do \
 		dh_link /usr/share/man/man1/f2py.1.gz /usr/share/man/man1/f2py$$v.1.gz; \
@@ -126,7 +128,6 @@ build-arch:
 build-indep: 
 	# build doc only for default python version
 	(export MPLCONFIGDIR=. ; make -C doc html PYTHONPATH=../$(PYLIBPATH))
-	rst2html numpy/f2py/docs/usersguide/index.txt > numpy/f2py/docs/usersguide/index.html
 
 update_intersphinx_mapping:
 	wget http://docs.python.org/dev/objects.inv -O debian/python.org_objects.inv

@@ -1,10 +1,19 @@
-Description: Use a local copy of object.inv from doc.python.org, instead of downloading it each time from the internet
+From 5305d610c7d0855d1b9e5a3d9b2f4a97c14cd714 Mon Sep 17 00:00:00 2001
+From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
+Date: Sun, 11 Oct 2015 10:12:16 -0700
+Subject: Use a local copy of object.inv from doc.python.org, instead of
+ downloading it each time from the internet
 
-Index: python-numpy-1.4.1/doc/source/conf.py
-===================================================================
---- python-numpy-1.4.1.orig/doc/source/conf.py	2010-07-13 00:25:45.059911225 +0200
-+++ python-numpy-1.4.1/doc/source/conf.py	2010-07-13 00:26:47.816913315 +0200
-@@ -205,7 +205,7 @@
+Patch-Name: 10_use_local_python.org_object.inv_sphinx.diff
+---
+ doc/source/conf.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/doc/source/conf.py b/doc/source/conf.py
+index 3324982..6ddeafe 100644
+--- a/doc/source/conf.py
++++ b/doc/source/conf.py
+@@ -199,7 +199,7 @@ texinfo_documents = [
  # -----------------------------------------------------------------------------
  # Intersphinx configuration
  # -----------------------------------------------------------------------------
