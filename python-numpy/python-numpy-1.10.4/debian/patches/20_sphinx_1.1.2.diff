@@ -1,0 +1,19 @@
+Description: fix FTBFS with sphinx 1.1.2 because automodule is not allowed in glossary
+Author: Pauli Virtanen
+Origin: https://github.com/numpy/numpy/commit/1451b414693d63d8224857b1c67726eb8d5f97af
+Forwarded: not-needed
+Index: python-numpy-1.5.1/doc/source/glossary.rst
+===================================================================
+--- python-numpy-1.5.1.orig/doc/source/glossary.rst	2010-11-09 00:58:22.000000000 +0100
++++ python-numpy-1.5.1/doc/source/glossary.rst	2012-01-31 23:31:29.323501993 +0100
+@@ -4,9 +4,7 @@
+ 
+ .. toctree::
+ 
+-.. glossary::
+-
+-   .. automodule:: numpy.doc.glossary
++.. automodule:: numpy.doc.glossary
+ 
+ Jargon
+ ------
