@@ -1,8 +1,8 @@
-mako (0.9.1-0ubuntu1) precise; urgency=low
+mako (0.9.1-1ppa1~precise) precise; urgency=low
 
   * New upstream release
 
- -- vlee <vlee@precise>  Fri, 18 Mar 2016 16:58:45 -0700
+ -- Vinson Lee <vlee@freedesktop.org>  Fri, 18 Mar 2016 16:58:45 -0700
 
 mako (0.5.0-1) unstable; urgency=low
 

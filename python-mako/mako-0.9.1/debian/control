@@ -1,7 +1,7 @@
 Source: mako
 Section: python
 Priority: optional
-Maintainer: Piotr Ożarowski <piotr@debian.org>
+Maintainer: Vinson Lee <vlee@freedesktop.org>
 Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 5.0.38)
 Build-Depends-Indep: python-all, python-setuptools,
