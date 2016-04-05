@@ -1,3 +1,9 @@
+intel-microcode (0.20151106-p-1ubuntu1) precise; urgency=medium
+
+  * New upstream data file: microcode-20151106
+
+ -- Vinson Lee <vlee@freedesktop.org@>  Mon, 04 Apr 2016 18:52:38 -0700
+
 intel-microcode (0.20140624-p-1ubuntu1) precise; urgency=medium
 
   * New upstream data file: microcode-20140624
