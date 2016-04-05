@@ -1,7 +1,7 @@
 Source: intel-microcode
 Section: non-free/admin
 Priority: extra
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: Vinson Lee <vlee@freedesktop.org>
 XSBC-Original-Maintainer: Giacomo Catenazzi <cate@debian.org>
 Uploaders: Henrique de Moraes Holschuh <hmh@debian.org>
 Build-Depends: cdbs, debhelper (>= 5)
