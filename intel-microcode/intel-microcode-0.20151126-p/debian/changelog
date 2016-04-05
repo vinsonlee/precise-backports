@@ -1,4 +1,4 @@
-intel-microcode (0.20151106-p-1ubuntu1) precise; urgency=medium
+intel-microcode (0.20151106-p-1ubuntu1ppa1~precise) precise; urgency=medium
 
   * New upstream data file: microcode-20151106
 
