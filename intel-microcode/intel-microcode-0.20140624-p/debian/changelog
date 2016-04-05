@@ -1,0 +1,141 @@
+intel-microcode (0.20140624-p-1ubuntu1) precise; urgency=medium
+
+  * New upstream data file: microcode-20140624
+    -LP: #1335156
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Fri, 27 Jun 2014 09:07:04 -0600
+
+intel-microcode (0.20140430-p-1ubuntu1) precise; urgency=medium
+
+  * New upstream data file: microcode-20140430
+    https://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&DwnldID=23829
+    -LP: #1319114
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Tue, 13 May 2014 12:15:53 -0600
+
+intel-microcode (0.20140122-p-1ubuntu1) precise; urgency=medium
+
+  * New upstream data file: microcode-20140122
+    -LP: #1273532
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Mon, 03 Mar 2014 07:08:04 -0700
+
+intel-microcode (0.20130808-p-1ubuntu1) precise-security; urgency=low
+
+  * New upstream data file: microcode-20130808
+    -LP: #1212497
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Tue, 20 Aug 2013 12:17:44 -0600
+
+intel-microcode (0.20111110-1) precise; urgency=low
+
+  * New upstream data file: microcode-20111110
+    -LP: #867499
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Thu, 05 Jan 2012 06:44:22 -0700
+
+intel-microcode (0.20110915-1) oneiric; urgency=low
+
+  * New upstream data file: microcode-20110915
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Thu, 29 Sep 2011 13:46:14 -0600
+
+intel-microcode (0.20110428-1) oneiric; urgency=low
+
+  * New upstream data file: microcode-20110428
+    -LP: #781512
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Thu, 26 May 2011 08:26:20 -0600
+
+intel-microcode (0.20101123-1) natty; urgency=low
+
+  * New upstream data file: microcode-20101123
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Fri, 17 Dec 2010 12:54:19 -0700
+
+intel-microcode (0.20100914-1) unstable; urgency=low
+
+  * New upstream data file: microcode-20100914
+    + Updated Microcodes:
+      sig 0x000206c2, pf mask 0x03, 2010-09-07, rev 0x0013, size 7168
+    + Removed Microcodes:
+      sig 0x000006d8, pf mask 0x08, 2006-08-31, rev 0x0021, size 2048
+      sig 0x000006d8, pf mask 0x20, 2004-07-22, rev 0x0020, size 2048
+      sig 0x00000f65, pf mask 0x04, 2007-05-10, rev 0x000b, size 2048
+      sig 0x00010661, pf mask 0x04, 2007-05-01, rev 0x0036, size 4096
+      sig 0x000106a5, pf mask 0x03, 2010-03-03, rev 0x0015, size 8192
+      sig 0x000206e6, pf mask 0x04, 2010-04-21, rev 0x0007, size 6144
+  * Add upstream changelog, with a list of changed microcodes per release
+  * Update debian/copyright to match the latest license
+  * Update documentation on where and how to get an up-to-date microcode
+    file directly from Intel, and how to install it
+  * postinst: run the microcode.ctl initscript on install/upgrades to apply
+    updated microcodes to the processor
+  * Merge changes from version 0.20090927-1, which I lost in the last
+    upload for some stupid reason.  The lack of 0.20090927-1 in the
+    changelog upsets the BTS' version tracking, so it is more than just a
+    cosmetic fix
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 26 Sep 2010 19:51:46 -0300
+
+intel-microcode (0.20100826-1) unstable; urgency=low
+
+  * New upstream data file: microcode-20100826 (closes: #571128)
+  * debian/control: Add myself to uploaders
+  * debian/control: bump standards-version to 3.9.1 (no changes required)
+  * debian/control: Change homepage to the only stable URI available,
+    which is that of the RSS feed
+  * debian/source/format: set to 1.0, we gain nothing from the other formats
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 28 Aug 2010 11:25:34 -0300
+
+intel-microcode (0.20090927-1) unstable; urgency=low
+
+  * New upstream version (Closes: #549706)
+
+ -- Giacomo Catenazzi <cate@debian.org>  Tue, 06 Oct 2009 07:42:02 +0200
+
+intel-microcode (0.20090330-1) unstable; urgency=low
+
+  * New upstream version. This version replaced 6 and add
+    extra 3 microcode files.
+
+ -- Giacomo Catenazzi <cate@debian.org>  Tue, 31 Mar 2009 07:54:00 +0200
+
+intel-microcode (0.20080910-2) unstable; urgency=low
+
+  * Revert architecture change
+
+ -- Giacomo Catenazzi <cate@debian.org>  Mon, 13 Oct 2008 19:40:18 +0200
+
+intel-microcode (0.20080910-1) unstable; urgency=low
+
+  * New upstream version.
+  * Set architecture to all: the data is architecture indipendent
+    (and used in i386 and amd64 architectures). Note: this package
+    is "non-free" (i.e. usual manual check), so it should not
+    use space on CD and other medium, on non Intel architectures.
+
+ -- Giacomo Catenazzi <cate@debian.org>  Mon, 15 Sep 2008 08:33:19 +0200
+
+intel-microcode (0.20080401-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Giacomo Catenazzi <cate@debian.org>  Fri, 25 Apr 2008 18:59:10 +0200
+
+intel-microcode (0.20080220-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Giacomo Catenazzi <cate@debian.org>  Mon, 10 Mar 2008 07:48:48 +0100
+
+intel-microcode (0.20080131-1) unstable; urgency=low
+
+  * Initial release. The new license is finally enough good for
+    debian non-free
+  * BTW packing the microcode will solve potential/theoretical
+    man-in-the-middle attack (Closes: #282583)
+
+ -- Giacomo Catenazzi <cate@debian.org>  Wed, 20 Feb 2008 19:33:10 +0100
+

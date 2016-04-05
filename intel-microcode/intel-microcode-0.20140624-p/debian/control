@@ -1,0 +1,27 @@
+Source: intel-microcode
+Section: non-free/admin
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Giacomo Catenazzi <cate@debian.org>
+Uploaders: Henrique de Moraes Holschuh <hmh@debian.org>
+Build-Depends: cdbs, debhelper (>= 5)
+Standards-Version: 3.9.1
+Homepage: http://feeds.downloadcenter.intel.com/rss/?p=483&lang=eng
+XS-Autobuild: yes
+
+Package: intel-microcode
+Architecture: i386 amd64
+Depends: microcode.ctl, ${misc:Depends}
+Description: Processor microcode data file for Intel CPUs
+ The microcode data file for Linux contains the latest microcode
+ definitions for all Intel processors. Intel releases microcode
+ updates to correct processor behavior as documented in the
+ respective processor specification updates. While the regular
+ approach to getting this microcode update is via a BIOS upgrade,
+ Intel realizes that this is an administrative hassle; the Linux
+ Operating System has a mechanism to update the microcode after
+ booting the OS.
+ .
+ This package contains only the microcode, so it needs the loader
+ provided in the package microcode.ctl
+

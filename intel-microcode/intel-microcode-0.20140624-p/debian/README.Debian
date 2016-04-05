@@ -1,0 +1,76 @@
+intel-microcode for Debian
+--------------------------
+
+Intel distributes microcode updates for all of its IA32 (i686) and
+EM64T (amd64/x86-64) processors as a single microcode bundle, in text
+format.
+
+This microcode bundle can be used to update the processors in a running
+system with the help of a Linux kernel driver and also of a companion
+helper utility (such as microcode.ctl).
+
+When it is installed or upgraded, the intel-microcode package will
+attempt to run microcode.ctl to apply any relevant microcode updates.
+
+
+Downloading from Intel:
+
+A new version of the microcode bundle can be downloaded directly from
+Intel, either by navigating to the support section looking for downloads
+for your processor, or through one of these RSS feeds:
+http://feeds.downloadcenter.intel.com/rss/?p=483&lang=eng
+http://feeds.downloadcenter.intel.com/rss/?p=2371&lang=eng
+
+To manually install the downloaded microcode bundle, unpack the archive
+you got from Intel and copy the microcode-*.dat file from the archive to
+/usr/share/misc/intel-microcode.dat.
+
+You should make sure the microcode data file is owned by root, and that
+it can only be written to by root (e.g. mode 0644) for security reasons:
+
+	chown root:root /usr/share/misc/intel-microcode.dat
+	chmod 0644 /usr/share/misc/intel-microcode.dat
+
+After you install the updated intel-microcode.dat file, you will have to
+use microcode.ctl to update the microcode on the processor cores:
+
+	/etc/init.d/microcode.ctl reload
+
+
+About the microcode distribution:
+
+Intel removes microcodes from their distribution regularly.  We assume
+the removals of microcodes for older processors are done to reduce file
+growth.  However, Intel has often removed microcodes that were recently
+updated, not just microcodes for old processors.
+
+Note that a removal is very different from a downgrade.  Microcode
+removals can regress the microcode version of the processors in a system
+by several releases, it all depends on what version of the processor
+microcode the BIOS of that system has available.
+
+It is worth notice that the Intel support site still distributes some
+older versions of the microcode package, and that the site has the
+(currently unused) capability of offering different versions of the
+microcode package for different processor families.
+
+Because of the microcode removals, using the latest version of the
+intel-microcode package may not be the best choice for a particular
+system.  If you have an older processor whose microcode was removed from
+the distribution, you should use a version of the intel-microcode
+package that has the latest available microcode for your processor (or
+install the appropriate intel-microcode.dat file as described above).
+
+If you have a recent processor whose microcode was removed from the
+distribution (and it had several updates in earlier releases), we cannot
+advise you whether you should update to a package without that microcode
+or not, as we do not know why a microcode that had been updated on
+earlier releases would be dropped entirely instead of downgraded.
+
+We have included a changelog with a list of microcode additions, updates
+and removals for every microcode release that was distributed by Debian,
+or through http://www.urbanmyth.org/microcode/, to help administrators
+of systems with old processors locate an appropriate intel-microcode
+package for their processors should they wish to.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org> Sat, 11 Sep 2010 18:22:16 -0300

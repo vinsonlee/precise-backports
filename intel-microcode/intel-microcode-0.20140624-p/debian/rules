@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+  
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+install/intel-microcode::
+	mkdir -p debian/intel-microcode/usr/share/misc/
+	cp -p microcode-*.dat debian/intel-microcode/usr/share/misc/intel-microcode.dat
